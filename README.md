@@ -35,7 +35,7 @@ Setup and install dependencies:
 
 ```bash
 git clone <repo_url>
-cd rundle_tts
+cd tts_api
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
