@@ -14,15 +14,22 @@ How to set up and run Rundle TTS app on host machine
 
 ## Cloudflare Tunnel
 
-Install cloudflared and set tunnel to run as a service:
+Install cloudflared:
 
 ```bash
-brew install cloudflared && 
-sudo cloudflared service install <token>
+brew install cloudflared
 ```
 
 <details>
-<summary>To run tunnel in current terminal session only:</summary>
+<summary>Set tunnel to run as a service on system boot:</summary>
+
+```bash
+sudo cloudflared service install <token>
+```
+</details>
+
+<details>
+<summary>Manually run tunnel in current terminal session only:</summary>
 
 ```bash
 cloudflared tunnel run --token <token>
@@ -40,4 +47,11 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+Run script:
+
+```bash
+chmod +x run.sh
+./run.sh
 ```
