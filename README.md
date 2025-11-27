@@ -2,11 +2,11 @@ https://huggingface.co/spaces/NihalGazi/Text-To-Speech-Unlimited
 
 # Setup
 
-How to set up and run the Rundle TTS app on host machine
+How to set up and run Rundle TTS app on host machine
 
 ## SSL Cert Setup
 
-(On macOS)
+(macOS)
 
 1. Open Keychain Access -> System Roots -> search "cloudflare"
 2. Export Cloudflare root CA cert to project dir as `cert.pem`
