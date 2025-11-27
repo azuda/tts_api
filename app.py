@@ -222,7 +222,8 @@ style = """
 
 if __name__ == "__main__":
   try:
-    app.launch(css=style)
+    port = int(os.getenv("PORT", os.getenv("GRADIO_PORT", 7860)))
+    app.launch(server_port=port, css=style)
   except Exception as e:
     print(f"Error launching the app: {e}")
   # if NSFW_URL_TEMPLATE and TTS_URL_TEMPLATE:

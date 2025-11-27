@@ -22,6 +22,6 @@ APP_PID=$!
 
 sleep 3
 
-cloudflared tunnel run --token "$CF_TUNNEL_TOKEN" --url http://localhost:7860
+cloudflared tunnel run --token "$CF_TUNNEL_TOKEN" --url "http://localhost:${PORT}"
 
 kill $APP_PID || true
